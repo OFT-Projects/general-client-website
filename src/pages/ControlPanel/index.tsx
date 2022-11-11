@@ -177,7 +177,7 @@ const ControlPanel: React.FC = () => {
         setTime(time - 1);
       } else {
         handleStateRecovery();
-        setTime(30);
+        setTime(6);
       }
     }, 1000);
 
@@ -250,7 +250,7 @@ const ControlPanel: React.FC = () => {
 
               <section>
                 <SubInfoContainer bgColor="#638FFF">
-                  <ValueLabel>{waterTemp}°C</ValueLabel>
+                  <ValueLabel>{(waterTemp * 23)/520}°C</ValueLabel>
                   <InfoLabel>Temperatura da Água</InfoLabel>
                 </SubInfoContainer>
 
