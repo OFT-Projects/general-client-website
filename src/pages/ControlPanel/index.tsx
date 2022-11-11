@@ -250,7 +250,7 @@ const ControlPanel: React.FC = () => {
 
               <section>
                 <SubInfoContainer bgColor="#638FFF">
-                  <ValueLabel>{(waterTemp * 23)/520}°C</ValueLabel>
+                  <ValueLabel>{((waterTemp * 23) / 520).toFixed(2)}°C</ValueLabel>
                   <InfoLabel>Temperatura da Água</InfoLabel>
                 </SubInfoContainer>
 
