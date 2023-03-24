@@ -46,6 +46,8 @@ interface ITMSPayload {
 import circleLogo from '../../assets/circle_ico_green_background_transparent.svg';
 
 const ControlPanel: React.FC = () => {
+  const baseUrl = process.env.BASE_URL;
+
   const [isLoading, setLoading] = useState(false);
   
   const [online, setOnline] = useState(false);
@@ -67,7 +69,7 @@ const ControlPanel: React.FC = () => {
     try {
       setLoading(true);
 
-      const response = await fetch('https://tz1grmzlid.execute-api.us-east-1.amazonaws.com/dev/mcsu/modulo_125', {
+      const response = await fetch(`${baseUrl}/mcsu/modulo_125`, {
         method: 'POST',
         body: JSON.stringify({
           state_update: { 
@@ -119,7 +121,7 @@ const ControlPanel: React.FC = () => {
       setLoading(true);
       setSync(true);
 
-      const response = await fetch('https://tz1grmzlid.execute-api.us-east-1.amazonaws.com/dev/msr/modulo_125', {
+      const response = await fetch(`${baseUrl}/msr/modulo_125`, {
         method: 'POST'
       });
 
